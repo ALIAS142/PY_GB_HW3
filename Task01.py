@@ -5,28 +5,30 @@
 # Ввод: 3 2 3 7 5
 # Ввод: 3 -> 2
 
-n = int(input("Enter number:  "))
-from random import randint
-list = [randint(0, 9) for i in range(n)]
+
+# Вариант 1:
+n = int(input("Enter quantity:  "))
+# from random import randint
+# list = [randint(0, 9) for i in range(n)]
+list = []
+for i in range(n):
+    x = int(input("Enter number:  "))
+    list.append(x)
 print(list)
-y = int(input("Enter digit: "))
+y = int(input("Enter checking digit: "))
 count = 0
 for i in list:
     if y == i:
      count += 1
-
 print(count)
 
-list_1 = [1, 2, 3, 4, 5]
-k = 3
 
-
-# Введите ваше решение ниже
-
-count = 0
-for i in list_1:
-    if k == i:
-     count += 1
-
-print(count)
+# Вариант 2:
+# list_1 = [1, 2, 3, 4, 5]
+# k = 3
+# count = 0
+# for i in list_1:
+#     if k == i:
+#      count += 1
+# print(count)
 
