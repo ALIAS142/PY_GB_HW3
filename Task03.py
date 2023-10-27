@@ -7,6 +7,7 @@
 #
 # ноутбук 12
 
+# Вариант 1:
 dic2 = {"А": 1, "В": 1, "Е": 1, "И": 1, "Н": 1, "О": 1, "Р": 1, "С": 1, "Т": 1,
         "Д": 2, "К": 2, "Л": 2, "М": 2, "П": 2, "У": 2, "Б": 3, "Г": 3, "Ё": 3, "Ь": 3, "Я": 3,
         "Й": 4, "Ы": 4, "Ж": 5, "З": 5, "Х": 5, "Ц": 5, "Ч": 5, "Ш": 8, "Э": 8, "Ю": 8,
@@ -22,3 +23,38 @@ total = 0
 for i in b:
      total += dic2[i]
 print(total)
+
+
+# Вариант 2:
+
+en = {
+    1: 'AEIOULNSTR',
+    2: 'DG',
+    3: 'BCMP',
+    4: 'FHVWY',
+    5: 'K',
+    8: 'JX',
+    10: 'QZ'
+}
+ru = {
+    1: 'АВЕИНОРСТ',
+    2: 'ДКЛМПУ',
+    3: 'БГЁЬЯ',
+    4: 'ЙЫ',
+    5: 'KЖЗХЦЧ',
+    8: 'ШЭЮ',
+    10: 'ФЩЪ'
+}
+
+lang = abs(int(input('Enter 1 for english, 2 for russian')))
+word = input('Enter word').upper()
+info_one = [k for i in word for k, v in ru.items() if i in v]
+
+info = []
+
+for i in word:
+    for k, v in ru.items():
+        if i in v:
+            info.append(k)
+print(info_one)
+print(info)

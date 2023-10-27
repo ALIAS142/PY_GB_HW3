@@ -7,20 +7,20 @@
 
 
 # Вариант 1:
-n = int(input("Enter quantity:  "))
-# from random import randint
-# list = [randint(0, 9) for i in range(n)]
-list = []
-for i in range(n):
-    x = int(input("Enter number:  "))
-    list.append(x)
-print(list)
-y = int(input("Enter checking digit: "))
-count = 0
-for i in list:
-    if y == i:
-     count += 1
-print(count)
+# n = int(input("Enter quantity:  "))
+# # from random import randint
+# # list = [randint(0, 9) for i in range(n)]
+# list = []
+# for i in range(n):
+#     x = int(input("Enter number:  "))
+#     list.append(x)
+# print(list)
+# y = int(input("Enter checking digit: "))
+# count = 0
+# for i in list:
+#     if y == i:
+#      count += 1
+# print(count)
 
 
 # Вариант 2:
@@ -32,3 +32,11 @@ print(count)
 #      count += 1
 # print(count)
 
+# Вариант 3:
+
+a = []
+for i in range(int(input())):
+    a.append(int(input()))
+print(a)
+x = int(input("Enter number x:  "))
+print(a.count(x))
